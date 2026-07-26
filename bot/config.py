@@ -14,7 +14,7 @@ CHANNEL_ID = int(os.getenv("CHANNEL_ID", "0"))
 OWNER_USERNAME = os.getenv("OWNER_USERNAME", "")
 
 if os.getenv("RENDER"):
-    DATABASE_URL = "sqlite+aiosqlite:///tmp/bot.db"
+    DATABASE_URL = "sqlite+aiosqlite:////tmp/bot.db"
 else:
     DATABASE_URL = f"sqlite+aiosqlite:///{Path(__file__).resolve().parent.parent / 'data' / 'bot.db'}"
 
